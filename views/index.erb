@@ -6,3 +6,9 @@
     <li><a href="/contacts/<%=contact.id%>"><%= contact.name %></a> - <%= contact.phone_number %></li>
   <% end %>
 </ul>
+
+<% if @page_number > 1 %>
+  <a href="/<%=@page_number - 1%>"> Previous </a>
+<% end %>
+
+<a href="/<%=@page_number + 1%>"> Next </a>
